@@ -9,7 +9,7 @@ module.exports = (err,req,res,next)=>{
         const message = `Duplicate Phone Number Entered`;
         err = new ErrorHandler(message,400);
     }
-
+    
     res.status(err.statusCode).json({
         success: false,
         message: err.message

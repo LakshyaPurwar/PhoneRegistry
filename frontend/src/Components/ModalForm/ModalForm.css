@@ -22,8 +22,8 @@ form.visible{
 }
 
 .form{
-    width:20rem;
-    height:30%;
+    width:40rem;
+    height:40%;
     background-color: white;
     display: flex;
     align-items: center;
@@ -55,5 +55,23 @@ form.visible{
     border:1px solid black;
     border-radius:0.8rem;
 
+}
+.error{
+    color:red;
+}
+
+.action{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:2rem;
+}
+
+.cancel{
+    background-color: rgba(255, 0, 0, 0.481);
+}
+.update{
+    background-color: rgba(255, 255, 0, 0.422);
 }
 

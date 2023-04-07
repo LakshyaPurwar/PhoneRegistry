@@ -6,8 +6,16 @@ const userSlice = createSlice({
     initialState : initialUsersState,
     reducers : {
 
+        setUser(state , action){
+            state.users = action.payload;
+        },
+
         addUser(state , action){
-            state.users = [...state.users , action.payload];
+           state.users = [...state.users , action.payload];
+           state.users.sort(function(a, b) {
+            return a.name.localeCompare(b.name);
+          });
+           
         },
 
         updateUser(state , action){
@@ -20,6 +28,9 @@ const userSlice = createSlice({
                     return user;
                 }
             });
+            state.users.sort(function(a, b) {
+                return a.name.localeCompare(b.name);
+              });
         },
 
         deleteUser(state , action){

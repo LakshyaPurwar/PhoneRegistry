@@ -1,4 +1,5 @@
 .app{
+    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,7 +9,12 @@
     height:100vh;
     width:100vw;
     background-color: white;
+    overflow:scroll;
 }
+
+.app::-webkit-scrollbar {
+    display: none;
+  }
 
 .btn{
     height:3rem;

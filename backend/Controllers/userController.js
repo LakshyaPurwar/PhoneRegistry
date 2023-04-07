@@ -5,11 +5,18 @@ const ErrorHandler = require("../Utils/ErrorHandler");
 // Createing new user
 
 exports.createUser = catchAsyncError(async (req, res, next) => {
-    const { name, phone_no } = req.body;
+    const { name, phone } = req.body;
+
+    const trimmed = name&&name.trim();
+
+    if(!trimmed || !phone || !name){
+        return next(new ErrorHandler("All fields are required",400));
+    }
+
 
     const user = await userModel.create({
-        name,
-        phone_no
+        name:trimmed,
+        phone
     })
 
     res.status(201).json({
@@ -21,15 +28,15 @@ exports.createUser = catchAsyncError(async (req, res, next) => {
 // Updating user details
 
 exports.updateUser = catchAsyncError(async (req, res, next) => {
-    const { newName, phone_no } = req.body;
+    const { name, phone} = req.body;
 
-    const user = await userModel.findOne({ phone_no: phone_no });
+    const user = await userModel.findOne({ phone: phone });
 
     if (!user) {
         return next(new ErrorHandler("User not found with this phone number", 404));
     }
 
-    user.name = newName;
+    user.name = name;
     await user.save();
 
     res.status(200).json({
@@ -41,8 +48,8 @@ exports.updateUser = catchAsyncError(async (req, res, next) => {
 // Deleting an user
 
 exports.deleteUser = catchAsyncError(async (req, res, next) => {
-    const { phone_no } = req.body;
-    const result = await userModel.deleteOne({ phone_no: phone_no });
+    const { phone } = req.body;
+    const result = await userModel.deleteOne({ phone: phone });
     if (result.deletedCount !== 1) {
         return next(new ErrorHandler("User not found with this phone number", 404));
     }
