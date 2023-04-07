@@ -22,7 +22,7 @@ const ListItem = (props) => {
 
         try {
 
-            const deleteUrl = 'http://localhost:4000/api/v1/user/delete'
+            const deleteUrl = 'https://phone-registry-backend.onrender.com/api/v1/user/delete'
             const response = await fetch(deleteUrl, {
                 method: 'POST',
                 body: JSON.stringify({phone : phone}),
@@ -63,7 +63,7 @@ const ListItem = (props) => {
         {
             const deleted = deleteUser(Number(props.phone));
             console.log(deleted && Number(props.phone));
-            {deleted && dispatch(userActions.deleteUser(props.phone))};
+            dispatch(userActions.deleteUser(props.phone));
         }
        
     }
@@ -72,7 +72,7 @@ const ListItem = (props) => {
         <div className='listItem'>
             <div className="name">Name : {props.name}</div>
             <div className="phone">Phone : {props.phone}</div>
-            <div className="action">
+            <div className="listItemAction">
                 <button className="update" onClick={handleUpdate}>Update</button>
                 <button className="delete" onClick={handleDelete}>Delete</button>
             </div>

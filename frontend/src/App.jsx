@@ -44,7 +44,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:4000/api/v1/users');
+      const response = await fetch('https://phone-registry-backend.onrender.com/api/v1/users');
       if (response.status !== 200) {
 
         throw new Error("Something went wrong ! ");
@@ -101,8 +101,7 @@ function App() {
         <button className="btn" onClick={showModal}>Add User</button>
       </section>
       <section className="users">
-        {/* <List list={users}></List> */}
-        <input type="text" placeholder="Search Name , Number"onChange={handleSearch}/>
+        <input className="search" type="text" placeholder="Search Name , Number"onChange={handleSearch}/>
         {content}
       </section>
     </div>

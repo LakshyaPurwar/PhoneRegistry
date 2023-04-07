@@ -1,11 +1,18 @@
 .list{
+    margin-top:2rem;
     display: flex;
     align-items:center;
     justify-content: center;
     flex-direction: column;
     gap:1rem;
-    padding:1rem;
-    border: 1px solid black;
-    width: 15rem;
+    padding:2rem;
+    background-color: rgba(7, 51, 63, 0.166);
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+    border:1px dotted rgb(13, 218, 204);
+    width: 40rem;
     
+}
+
+.title{
+    color:rgb(174, 226, 209)
 }

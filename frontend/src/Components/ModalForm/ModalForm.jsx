@@ -23,8 +23,8 @@ const ModalForm = () => {
         setIsSubmitting(true);
 
         try {
-            const addUrl = 'http://localhost:4000/api/v1/user/create';
-            const updateUrl = 'http://localhost:4000/api/v1/user/update';
+            const addUrl = 'https://phone-registry-backend.onrender.com/api/v1/user/create';
+            const updateUrl = 'https://phone-registry-backend.onrender.com/api/v1/user/update';
             const url = type === 'add' ? addUrl : updateUrl;
             const response = await fetch(url, {
                 method: 'POST',
