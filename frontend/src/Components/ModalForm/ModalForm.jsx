@@ -89,6 +89,7 @@ const ModalForm = () => {
                     dispatch(userActions.addUser({ name, phone }));
                     dispatch(modalAction.clearForm());
                     closeModal(event);
+                    window.alert("User added successfully ! ");
                 
             }
 
@@ -103,6 +104,7 @@ const ModalForm = () => {
             updated && dispatch(userActions.updateUser({ name, phone }));
             dispatch(modalAction.clearForm());
             closeModal(event);
+            window.alert("Username updated successfully ! ");
 
         }
 
