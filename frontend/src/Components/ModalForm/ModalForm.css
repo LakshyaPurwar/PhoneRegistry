@@ -1,0 +1,59 @@
+.backdrop{
+    height:100vh;
+    width:100vw;
+    background-color: rgba(0, 0, 0, 0.649);
+    position:absolute;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:-1;
+
+}
+
+
+form.visible{
+    z-index:2;
+}
+
+.backdrop.visible{
+    z-index: 1;
+}
+
+.form{
+    width:20rem;
+    height:30%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 1px solid black;
+    gap:1rem;
+    padding:1rem;
+    z-index:-1;
+    position: absolute;
+    margin:10rem auto;
+
+}
+
+
+
+
+
+.control{
+    display: flex;
+    flex-direction: column; 
+    width: 80%;
+    gap:0.3rem;
+}
+.input{
+    width:100%;
+    height:2rem;
+    border:1px solid black;
+    border-radius:0.8rem;
+
+}
+

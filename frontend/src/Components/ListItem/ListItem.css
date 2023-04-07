@@ -1,0 +1,38 @@
+.listItem{
+    box-sizing: border-box;
+    width: 15rem;
+    padding:2rem;
+    border:1px dotted rgb(82, 14, 14);
+    border-radius: 1rem;;
+    font: size 1rem;
+    font-weight: 500;
+    background-color: blanchedalmond;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap:1rem;
+    
+}
+
+.action{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-weight: 600;
+}
+
+.update{
+    border:1px dotted rgb(43, 34, 3);
+    background-color: rgba(255, 234, 0, 0.336);
+    padding:0.5rem 1rem;
+    border-radius: 0.8rem;
+
+}
+
+.delete{
+    border:1px dotted rgb(63, 7, 7);
+    background-color: rgba(244, 5, 5, 0.336);
+    padding:0.5rem 1rem;
+    border-radius: 0.8rem;
+}

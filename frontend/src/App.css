@@ -1,0 +1,24 @@
+.app{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding:5rem;
+    gap:2rem;
+    height:100vh;
+    width:100vw;
+    background-color: white;
+}
+
+.btn{
+    height:3rem;
+    width:15rem;
+    border-radius: 1rem;
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+/* .users{
+    width:15rem;
+    background-color: blanchedalmond;
+} */
